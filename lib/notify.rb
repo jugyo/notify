@@ -10,6 +10,7 @@ if ENV['NOTIFY']
 else
   unless defined? Notify
     Dir[File.join(__DIR__, "notify/*.rb")].each do |filename|
+      break if defined? Notify
       require filename
     end
   end
