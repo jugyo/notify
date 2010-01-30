@@ -18,7 +18,7 @@ end
 unless defined? Notify
   module Notify
     def self.notify(title, message)
-      $stderr.puts "#{title}: #{message}"
+      # do nothing
     end
   end
 end
