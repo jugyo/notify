@@ -1,3 +1,5 @@
 $:.unshift File.join(File.dirname(__FILE__), 'lib')
+require 'rubygems'
 require 'notify'
-notify 'notify!'
+
+Notify.notify 'title', 'message'

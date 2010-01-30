@@ -1,12 +1,24 @@
-require 'notify/notify-send'
-require 'notify/growl'
+unless defined? __DIR__
+  __DIR__ = File.dirname(__FILE__)
+end
 
-unless defined? Notify
-  module Notify
-    def notify(text)
-      $stderr.puts text
+if ENV['NOTIFY']
+  begin
+    require File.join(__DIR__, "notify/#{ENV['NOTIFY']}")
+  rescue LoadError
+  end
+else
+  unless defined? Notify
+    Dir[File.join(__DIR__, "notify/*.rb")].each do |filename|
+      require filename
     end
   end
 end
 
-include Notify
+unless defined? Notify
+  module Notify
+    def self.notify(title, message)
+      $stderr.puts "#{title}: #{message}"
+    end
+  end
+end
