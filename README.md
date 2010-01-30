@@ -22,6 +22,12 @@ Usage
     require 'notify'
     Notify.notify "title", "message"
 
+or
+
+    ENV['NOTIFY'] = 'growlnotify'
+    require 'notify'
+    Notify.notify "title", "message"
+
 Copyright
 ---------
 
