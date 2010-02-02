@@ -10,6 +10,7 @@ It supports followings:
 
 - growl
 - notify-send
+- Growl for Windows (ruby_gntp)
 
 Installation
 ---------
