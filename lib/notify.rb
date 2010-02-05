@@ -18,7 +18,7 @@ end
 
 unless defined? Notify
   module Notify
-    def self.notify(title, message)
+    def self.notify(title, message, option ={})
       # do nothing
     end
   end
