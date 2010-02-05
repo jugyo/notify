@@ -25,8 +25,8 @@ Usage
 
 or
 
-    ENV['NOTIFY'] = 'growlnotify'
     require 'notify'
+    Notify.setup :library => 'growlnotify'
     Notify.notify "title", "message"
 
 Copyright

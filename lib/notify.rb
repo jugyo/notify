@@ -1,25 +1,35 @@
-unless defined? __DIR__
-  __DIR__ = File.dirname(__FILE__)
-end
+module Notify
+  @@library_name = nil
 
-if ENV['NOTIFY']
-  begin
-    require File.join(__DIR__, "notify/#{ENV['NOTIFY']}")
-  rescue LoadError
+  def self.notify(title, message, option = {})
+    # do nothing
   end
-else
-  unless defined? Notify
-    Dir[File.join(__DIR__, "notify/*.rb")].each do |filename|
-      break if defined? Notify
-      require filename
+
+  def self.setup(option = {})
+    unless defined? __DIR__
+      __DIR__ = File.dirname(__FILE__)
+    end
+
+    if option[:library]
+      begin
+        require File.join(__DIR__, "notify/#{option[:library]}")
+      rescue LoadError
+      end
+    end
+
+    if @@library_name.nil?
+      Dir[File.join(__DIR__, "notify/*.rb")].each do |filename|
+        break unless @@library_name.nil?
+        require filename
+      end
     end
   end
+
+  def self.library_name
+    @@library_name
+  end
 end
 
-unless defined? Notify
-  module Notify
-    def self.notify(title, message, option ={})
-      # do nothing
-    end
-  end
+if Notify.library_name.nil?
+  Notify.setup
 end
