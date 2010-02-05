@@ -1,16 +1,16 @@
 notify
 ======
 
-The "notify" provides a function to notify on cross platform.
+"Notify" provides notification functionalities on cross platforms.
 
 Feature
 ---------
 
-It supports followings:
+Notify supports the following features:
 
 - growl
 - notify-send
-- Growl for Windows (ruby_gntp)
+- Growl for Windows (`ruby_gntp`)
 
 Installation
 ---------
