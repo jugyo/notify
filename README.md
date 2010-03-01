@@ -11,6 +11,7 @@ Notify supports the following features:
 - growl
 - notify-send
 - Growl for Windows (`ruby_gntp`)
+- libnotify
 
 Installation
 ---------
