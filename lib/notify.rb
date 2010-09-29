@@ -18,8 +18,8 @@ end
 
 unless defined? Notify
   module Notify
-    def self.notify(title, message, option ={})
-      # do nothing
+    def self.notify(title, message)
+      puts "#{title}: #{message}"
     end
   end
 end
