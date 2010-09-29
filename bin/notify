@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+$:.unshift File.join(File.dirname(__FILE__), '..', 'lib')
+require 'notify'
+
+title = ARGV.shift || 'Notify'
+message = ARGV.empty? ? 'notify' : ARGV.join("\n")
+
+Notify.notify title, message

@@ -30,6 +30,11 @@ or
     require 'notify'
     Notify.notify "title", "message"
 
+Command
+---------
+
+    % notify title messages
+
 Copyright
 ---------
 
