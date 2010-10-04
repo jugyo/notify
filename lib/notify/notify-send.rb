@@ -1,4 +1,4 @@
-if system('which notify-send > /dev/null 2>&1')
+if which('notify-send')
   module Notify
     def self.notify(title, message, option = {})
       system 'notify-send', title, message
