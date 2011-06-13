@@ -1,5 +1,5 @@
-if which('notify-send')
-  module Notify
+module Notify
+  if which('notify-send')
     def self.notify(title, message, option = {})
       system 'notify-send', title, message
     end
