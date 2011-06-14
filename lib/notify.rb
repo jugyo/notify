@@ -1,4 +1,5 @@
 require 'fileutils'
+require 'erb'
 
 module Notify
   def self.which(prog, path=ENV['PATH'])
@@ -11,6 +12,10 @@ module Notify
     else
       return system("which #{prog} > /dev/null 2>&1")
     end
+  end
+
+  def self.html_escape(text)
+    ERB::Util.html_escape(text)
   end
 end
 
