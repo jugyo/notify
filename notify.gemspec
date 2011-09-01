@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
      "lib/notify.rb",
      "lib/notify/growlnotify.rb",
      "lib/notify/kdialog.rb",
-     "lib/notify/lib_notify.rb",
+     "lib/notify/libnotify.rb",
      "lib/notify/notify-send.rb",
      "lib/notify/ruby-growl.rb",
      "lib/notify/ruby_gntp.rb",
