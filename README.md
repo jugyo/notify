@@ -12,6 +12,7 @@ Notify supports the following features:
 - notify-send
 - Growl for Windows (`ruby_gntp`)
 - libnotify
+- Mountain Lion Notification Center (`terminal-notifier`)
 
 Installation
 ---------
