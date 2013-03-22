@@ -2,7 +2,7 @@ module Notify
   begin
     require 'ruby-growl'
 
-    @@growl = Growl.new 'localhost', 'ruby', ['notify']
+    @@growl = Growl.new 'localhost', 'ruby', 'GNTP'
     def self.notify(title, message, option = {})
       @@growl.notify 'notify', title, message, option[:priority] || 0, option[:sticky] || false
     end
