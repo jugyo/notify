@@ -2,9 +2,9 @@ module Notify
   begin
     require 'ruby-growl'
 
-    @@growl = Growl.new 'localhost', 'ruby'
-    @@growl.add_notification 'notify'
     def self.notify(title, message, option = {})
+      @@growl = Growl.new 'localhost', option[:app_name] || "ruby"
+      @@growl.add_notification 'notify'
       @@growl.notify 'notify', title, message, option[:priority] || 0, option[:sticky] || false
     end
   rescue LoadError
