@@ -20,13 +20,18 @@ module Notify
 end
 
 dir = File.dirname(__FILE__)
-if ENV['NOTIFY']
-  require File.join(dir, "notify/#{ENV['NOTIFY']}")
-else
-  Dir[File.join(dir, "notify/*.rb")].each do |filename|
-    break if Notify.methods.include?(:notify)
-    require filename
+begin
+  if ENV['NOTIFY']
+    require File.join(dir, "notify/#{ENV['NOTIFY']}")
+  else
+    Dir[File.join(dir, "notify/*.rb")].each do |filename|
+      break if Notify.methods.include?(:notify)
+      require filename
+    end
   end
+rescue LoadError
+  # A safeguard against bad libraries or edge-case errors.
+  puts "Notify can't find the library specified."
 end
 
 module Notify

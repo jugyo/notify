@@ -31,6 +31,11 @@ or
     require 'notify'
     Notify.notify "title", "message"
 
+Notify also allows passing in an app name to replace the default "ruby":
+
+    require 'notify'
+    Notify.notify "title", "message", { app_name: "My App" }
+
 Command
 ---------
 
