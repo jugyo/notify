@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "notify"
-  s.version = "0.5.0"
+  s.version = "0.5.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["jugyo"]
-  s.date = "2013-03-25"
+  s.date = "2013-04-04"
   s.description = "The \"notify\" provides a function to notify on cross platform."
   s.email = "jugyo.org@gmail.com"
   s.executables = ["notify"]
