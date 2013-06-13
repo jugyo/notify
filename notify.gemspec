@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "notify"
-  s.version = "0.5.1"
+  s.version = "0.5.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["jugyo"]
-  s.date = "2013-04-04"
+  s.date = "2013-06-13"
   s.description = "The \"notify\" provides a function to notify on cross platform."
   s.email = "jugyo.org@gmail.com"
   s.executables = ["notify"]
@@ -36,7 +36,7 @@ Gem::Specification.new do |s|
   ]
   s.homepage = "http://github.com/jugyo/notify"
   s.require_paths = ["lib"]
-  s.rubygems_version = "2.0.0"
+  s.rubygems_version = "2.0.3"
   s.summary = "A function to notify on cross platform."
 end
 
