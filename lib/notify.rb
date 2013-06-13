@@ -1,5 +1,6 @@
 require 'fileutils'
 require 'erb'
+require 'notify/version'
 
 module Notify
   def self.which(prog, path=ENV['PATH'])
